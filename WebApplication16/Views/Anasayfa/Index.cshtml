@@ -1,0 +1,50 @@
+﻿@using WebApplication16.Models.Siniflar
+@model List<Anasayfa>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KİŞİSEL WEBSİTE</title>
+    <script src="https://kit.fontawesome.com/5eedaec9ef.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="~/web-kisiselwebsite/style.css" />
+
+</head>
+<body>
+    <div class="center">
+       
+        <div class="avatar">
+            @foreach (var x in Model)
+            {
+                <img src="@x.profil" />
+            }
+          
+        </div>
+        <div class="content">
+            @foreach (var x in Model)
+            {
+                <h1>@x.isim</h1>
+                <h2>@x.unvan</h2>
+                <p>@x.aciklama</p>
+                <h3>@x.iletisim</h3>
+            }
+
+
+        </div>
+       @Html.Action("ikonlar","Anasayfa")
+
+
+
+
+    </div>
+
+
+
+
+</body>
+</html>

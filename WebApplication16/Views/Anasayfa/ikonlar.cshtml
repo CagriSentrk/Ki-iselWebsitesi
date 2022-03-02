@@ -1,0 +1,14 @@
+﻿@using WebApplication16.Models.Siniflar
+@model List<ikonlar>
+
+
+
+<div class="social">
+    @foreach (var x in Model)
+    {
+        <a href="@x.link"><i class="@x.ikonad"></i></a>
+       
+    }
+
+
+</div>

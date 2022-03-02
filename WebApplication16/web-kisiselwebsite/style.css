@@ -1,0 +1,79 @@
+*{
+    margin:0;
+    padding: 0;
+
+}
+body{
+    color: white;
+    font-family: sans-serif;
+    background-image: url(arkaplan.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.center .avatar img{
+    border-radius: 50%;
+    width: 40%;
+    height:40%;
+     margin-top: 5%; /*üst kenar boşluğunu ayarladık */
+}
+.center{
+     width: 800px; /* genişlik */
+    background-color: rgba(0,0,0,0.7);
+   height: 800px;  /* yükseklik */
+     text-align: center; /*ortalamak için kullandık */
+    border-radius: 50px;  /*kenarları yuvarlak yapmak için */
+}
+.content{
+    padding: 10px;
+}
+.content h1{
+    color: aqua;
+}
+.content h2{
+    color: bisque;
+}
+.content p{
+   font-weight: lighter;
+   letter-spacing: 1px;
+  
+}
+div.social i{
+    padding: 0 10px;  /* ikonlar arası mesafe */
+    font-size: 70px;
+    color: rgba(255, 255, 255, 0.6);
+   
+
+}
+div.social i:hover{
+    color: rgb(112, 20, 20); 
+    transition: 0.4s; /*fareyi götürdüğümüzde renk değişimi için geçecek süre */
+}
+@media screen and (max-width:700px){
+    .center{
+        width: 300px;
+        height: 500px;
+    }
+    h1{
+        font-size: 25px;
+    }
+    h2{
+        font-size: 16px;
+    }
+    p{
+        width: 90%;
+        font-size: 12px;
+    }
+    h3{
+        font-size: 14px;
+    }
+    .social a i {
+        font-size: 35px;
+    }
+}
+
+    

@@ -1,0 +1,32 @@
+﻿@using WebApplication16.Models.Siniflar
+@model List<ikonlar>
+@{
+    ViewBag.Title = "ikonlistesi";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>İKONLAR</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>İD</th>
+        <th>ikon</th>
+        <th>güncelle</th>
+        <th>sil</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.id</td>
+            <td><i class="@x.ikonad"></i></td>
+            <td><a href="/admin/ikongetir/@x.id" class="btn btn-primary">Güncelle</a></td>
+            <td><a href="/admin/Sil/@x.id" class="btn btn-danger">Sil</a></td>
+
+
+        </tr>
+
+
+    }
+
+
+</table>
+<td> <a href="/Admin/YeniIkon" class="btn btn-primary ">İkon ekle</a></td>
